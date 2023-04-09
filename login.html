@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #005aa7;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #fffde4, #005aa7);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #fffde4, #005aa7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    li a:hover {
+  font-size: 2em;
+     }
+  </style>
+</head>
+<body>
+  <header style="position: fixed; top: 0; width: 99%; z-index: 1;">
+    <div class="logo">
+      <img src="FMC logo.png" alt="" width="120">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="meow.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="meow.html">Home</a></li>
+      </ul>
+    </nav>
+</header>
+    <main>
+        <section class="hero">
+            <div class="hero-content" style="color: #fff;">
+              <h2 style="text-align: center; font-size: 1.5em;">Flexing Meowman Corp.</h2>
+              <p style="text-align: center; font-size: 1.5em;">The flexing Meowman Corp. strives to make students tutoring easier than ever before.</p>
+              <a href="#" class="btn">To Learn More</a>
+            </div>
+          </section>
+    <h1 style="text-align: center;">Login</h1>
+    <html>
+<head>
+	<title >Microsoft Login Button</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://alcdn.msauth.net/browser/2.11.0/js/msal-browser.min.js"></script>
+</head>
+<body>
+
+	<!-- Add the following HTML code to create the Microsoft login button -->
+    <div style="display: flex; justify-content: center;">
+	<button id="signInButton">Microsoft Sign In</button>
+    </div>
+
+	<script>
+		// Configure the MSAL object with your app's client ID
+		const msalConfig = {
+			auth: {
+				clientId: 'YOUR_APP_CLIENT_ID_HERE'
+			}
+		};
+
+		// Create an MSAL object
+		const msalInstance = new msal.PublicClientApplication(msalConfig);
+
+		// Add an event listener to the Microsoft login button
+		const signInButton = document.getElementById('signInButton');
+		signInButton.addEventListener('click', async () => {
+			try {
+				// Sign in with Microsoft
+				const loginResponse = await msalInstance.loginPopup({
+					scopes: ['openid', 'profile', 'email'] // Add the required scopes
+				});
+
+				// Handle the login response
+				console.log(loginResponse);
+			} catch (error) {
+				console.log(error);
+			}
+		});
+	</script>
+
+</body>
+</html>
