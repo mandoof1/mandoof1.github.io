@@ -6,9 +6,9 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background: #005aa7;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #fffde4, #005aa7);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #fffde4, #005aa7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: #200122; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #200122, #6f0000); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #200122, #6f0000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
     li a:hover {
   font-size: 2em;
@@ -45,49 +45,7 @@
         <a href="about.html" class="btn">To Learn More</a>
       </div>
     </section>
-    <h1 style="text-align: center;">Login</h1>
-    <html>
-<head>
-	<title >Microsoft Login Button</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://alcdn.msauth.net/browser/2.11.0/js/msal-browser.min.js"></script>
-</head>
-<body>
-
-	<!-- Add the following HTML code to create the Microsoft login button -->
-    <div style="display: flex; justify-content: center;">
-	<button id="signInButton">Microsoft Sign In</button>
-    </div>
-
-	<script>
-		// Configure the MSAL object with your app's client ID
-		const msalConfig = {
-			auth: {
-				clientId: 'YOUR_APP_CLIENT_ID_HERE'
-			}
-		};
-
-		// Create an MSAL object
-		const msalInstance = new msal.PublicClientApplication(msalConfig);
-
-		// Add an event listener to the Microsoft login button
-		const signInButton = document.getElementById('signInButton');
-		signInButton.addEventListener('click', async () => {
-			try {
-				// Sign in with Microsoft
-				const loginResponse = await msalInstance.loginPopup({
-					scopes: ['openid', 'profile', 'email'] // Add the required scopes
-				});
-
-				// Handle the login response
-				console.log(loginResponse);
-			} catch (error) {
-				console.log(error);
-			}
-		});
-	</script>
-
-</body>
-</html>
+    <h1 style="text-align: center;">To Apply As A Tutor</h1>
+    <p style="text-align: center;">To apply as a tutor simply send me an email to <a href="mailto:haadii2005@gmail.com">haadii2005@gmail.com</a></p>
+    <h1 style="text-align: center;">To Apply As A Student</h1>
+    <p style="text-align: center;">To apply as a students simply send me an email to <a href="mailto:haadii2005@gmail.com">haadii2005@gmail.com</a></p>
